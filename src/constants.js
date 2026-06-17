@@ -5,6 +5,7 @@ export const APP_ID_MAP = Object.freeze({
         'bot.deriv.com': 29864,
         'bot.deriv.me': 29864, // todo: change when will be registered
         'bot.deriv.be': 31223,
+        'niletrades.live': 29864,
     }),
     staging: Object.freeze({
         'staging-bot.deriv.com': 29934,
@@ -23,4 +24,5 @@ export const OFFICIAL_BOT_DOMAINS = [
     'staging-bot.deriv.com',
     'staging-bot.deriv.be',
     'staging-bot.deriv.me',
+    'niletrades.live',
 ];

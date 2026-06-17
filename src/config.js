@@ -5,8 +5,8 @@ import { getOAuthURL } from './common/appId';
 const related_deriv_origin = getRelatedDerivOrigin();
 
 const getConfig = () => ({
-    app_title: 'Binary Bot',
-    app_logo: 'public/images/ic-brand-binarybot.svg',
+    app_title: 'Niletrades',
+    app_logo: 'public/images/ic-brand-niletrades.png',
     supported_languages: {
         en: 'English',
         es: 'Español',
@@ -148,12 +148,12 @@ const getConfig = () => ({
             logo: 'public/images/ic-brand-smarttrader.svg',
         },
         {
-            title: 'Binary Bot',
+            title: 'Niletrades',
             description: translate(
                 'Our classic “drag-and-drop” tool for creating trading bots, featuring pop-up trading charts, for advanced users.'
             ),
             link: '/',
-            logo: 'public/images/ic-brand-binarybot.svg',
+            logo: 'public/images/ic-brand-niletrades.png',
         },
     ],
     add_account: {

@@ -145,13 +145,13 @@ const Main = () => {
                 htmlAttributes={{
                     lang: getLanguage(),
                 }}
-                title={translate('Bot trading |  Automated trading system – Deriv')}
+                title={translate('Niletrades | Automated Trading System')}
                 defer={false}
                 meta={[
                     {
                         name: 'description',
                         content: translate(
-                            'Automate your trades with Deriv’s bot trading platform, no coding needed. Trade now on forex, synthetic indices, commodities, stock indices, and more.'
+                            'Automate your trades with Niletrades, a visual trading automation platform. No coding needed. Trade synthetic indices, forex, commodities, and stock indices.'
                         ),
                     },
                 ]}

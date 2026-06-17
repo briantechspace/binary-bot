@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Bot trading | Automated trading system – Deriv</title>
+        <title>Niletrades | Automated Trading System</title>
         <!-- Google Tag Manager -->
         <script>
             (function (w, d, s, l, i) {
@@ -87,12 +87,103 @@
 
         <span id="bbot-portal"></span>
 
-        <div class="barspinner dark">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
+        <!-- Customized Fullscreen Splash Screen -->
+        <div class="barspinner dark splash-screen">
+            <div class="splash-content">
+                <img class="splash-logo" src="public/images/ic-brand-niletrades.png" alt="Niletrades Logo" />
+                <h1 class="splash-title">Niletrades</h1>
+                <p class="splash-subtitle">Visual Trading Automation</p>
+                <div class="ring-loader">
+                    <div class="ring-inner"></div>
+                </div>
+            </div>
+            <style>
+                .splash-screen {
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100vw !important;
+                    height: 100vh !important;
+                    background: linear-gradient(135deg, #0e121a 0%, #171d2c 100%) !important;
+                    display: flex !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    z-index: 999999 !important;
+                    margin: 0 !important;
+                    transform: none !important;
+                }
+                .splash-content {
+                    text-align: center;
+                    animation: fadeIn 1s ease-out;
+                }
+                .splash-logo {
+                    width: 120px;
+                    height: auto;
+                    margin-bottom: 20px;
+                    filter: drop-shadow(0px 4px 20px rgba(0, 206, 209, 0.4));
+                    animation: float 3s ease-in-out infinite;
+                }
+                .splash-title {
+                    font-family: 'Outfit', 'Inter', 'IBM Plex Sans', sans-serif;
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    margin: 0 0 8px 0;
+                    background: linear-gradient(90deg, #00ced1, #00bfff, #1e90ff);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    letter-spacing: 2px;
+                    text-shadow: 0 2px 10px rgba(0, 206, 209, 0.2);
+                }
+                .splash-subtitle {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1rem;
+                    color: #94a3b8;
+                    margin: 0 0 40px 0;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                }
+                .ring-loader {
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto;
+                    border: 3px solid rgba(255, 255, 255, 0.05);
+                    border-radius: 50%;
+                    border-top-color: #00ced1;
+                    border-bottom-color: #1e90ff;
+                    animation: spin 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                }
+                .ring-inner {
+                    position: absolute;
+                    top: 6px;
+                    left: 6px;
+                    right: 6px;
+                    bottom: 6px;
+                    border: 3px solid rgba(255, 255, 255, 0.05);
+                    border-radius: 50%;
+                    border-left-color: #00bfff;
+                    border-right-color: #00bfff;
+                    animation: spin-reverse 1s linear infinite;
+                }
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                @keyframes spin-reverse {
+                    0% { transform: rotate(360deg); }
+                    100% { transform: rotate(0deg); }
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: scale(0.95); }
+                    to { opacity: 1; transform: scale(1); }
+                }
+                @keyframes float {
+                    0% { transform: translateY(0px); }
+                    50% { transform: translateY(-10px); }
+                    100% { transform: translateY(0px); }
+                }
+            </style>
         </div>
 
         <div id="main"></div>

@@ -1,5 +1,8 @@
 {
-	"rewrites":  [
-	  {"source": "/(.*)", "destination": "/"}
-	]
-  }
+    "cleanUrls": true,
+    "outputDirectory": "www",
+    "buildCommand": "npm run fetch-blockly-translations && npm run build",
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/" }
+    ]
+}
