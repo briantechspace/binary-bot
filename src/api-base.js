@@ -6,6 +6,7 @@ import {
     setClientAccounts,
     setConfigURL,
     setConfigAppID,
+    getConfigAppID,
 } from '@storage';
 import DerivAPIBasic from '@deriv/deriv-api/dist/DerivAPIBasic';
 import { observer as globalObserver } from '@utilities/observer';
@@ -172,11 +173,24 @@ class APIBase {
                 active_symbols,
             };
         } catch (err) {
-            if (err.error.code === 'InvalidAppID') {
+            if (err?.error?.code === 'InvalidAppID') {
                 globalObserver.emit('Error', err.error.message);
-                setConfigURL('');
-                setConfigAppID('');
-                window.location.reload();
+                if (getConfigAppID()) {
+                    setConfigURL('');
+                    setConfigAppID('');
+                    window.location.reload();
+                } else {
+                    // eslint-disable-next-line no-console
+                    console.error('Default App ID is not registered for this domain.');
+                    const is_already_on_endpoint = window.location.pathname.endsWith('/endpoint');
+                    if (!is_already_on_endpoint) {
+                        const base = window.location.pathname.substring(
+                            0,
+                            window.location.pathname.lastIndexOf('/') + 1
+                        );
+                        window.location.href = `${window.location.origin}${base}endpoint`;
+                    }
+                }
             }
             return {
                 error: err,

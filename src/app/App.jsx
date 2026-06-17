@@ -55,7 +55,8 @@ const App = () => {
         cache: false,
     });
 
-    if (has_active_symbols.length === 0) return null;
+    const is_endpoint = window.location.pathname.endsWith('/endpoint');
+    if (has_active_symbols.length === 0 && !is_endpoint) return null;
 
     return <Routes />;
 };
